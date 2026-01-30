@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大好的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+        }
+        /* 个人信息区（头像+基础介绍） */
+        .intro-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .intro-avatar img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+        }
+        .intro-basic h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .intro-basic .zhihu-id {
+            color: #3498db;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        /* 兴趣板块（图文卡片） */
+        .intro-interests {
+            margin-top: 20px;
+        }
+        .interests-title {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .interests-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .interest-card {
+            flex: 1;
+            min-width: 220px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s;
+        }
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .card-icon img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+        .card-text h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .card-text p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        /* 知乎跳转区 */
+        .zhihu-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .zhihu-btn {
+            display: inline-block;
+            background-color: #0f88eb;
+            color: white;
+            text-decoration: none;
+            padding: 14px 35px;
+            border-radius: 6px;
+            font-size: 19px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        .zhihu-btn:hover {
+            background-color: #0078d7;
+        }
+        .zhihu-desc {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头像+基础介绍 -->
+        <div class="intro-header">
+            <div class="intro-avatar">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/6ad1818e0e2444f293ba2260f181ef13.jpg~tplv-a9rns2rl98-image.png?lk3s=8e244e95&rcl=2026013011072238268B5EE0FC53263B63&rrcfp=dafada99&x-expires=2085966442&x-signature=vrSvL39jkmbMoQuZ31c%2FQt9dspk%3D" 
+                     alt="个人头像" 
+                     onerror="this.src='https://via.placeholder.com/160?text=头像'">
+            </div>
+            <div class="intro-basic">
+                <h1>大好</h1>
+                <div class="zhihu-id">知乎ID：@大好</div>
+                <p style="color: #666; line-height: 1.7; font-size: 15px;">
+                    一个爱钻「原理」的科技爱好者——既沉迷物理/航天的底层逻辑，也爱围观社会话题的多元观点；<br>
+                    日常用编程（前端/Python）折腾小项目，也爱记录不同领域的思考碎片~
+                </p>
+            </div>
+        </div>
+
+        <!-- 兴趣板块（图文卡片） -->
+        <div class="intro-interests">
+            <div class="interests-title">我的关注领域</div>
+            <div class="interests-cards">
+                <!-- 科学原理类 -->
+                <div class="interest-card">
+                    <div class="card-icon">
+                        <img src="https://picsum.photos/id/1/45/45" alt="物理图标">
+                    </div>
+                    <div class="card-text">
+                        <h3>科学原理探索</h3>
+                        <p>沉迷超导、航天这类「硬核科技」的底层逻辑，喜欢拆解事物运行的本质~</p>
+                    </div>
+                </div>
+                <!-- 社会话题类 -->
+                <div class="interest-card">
+                    <div class="card-icon">
+                        <img src="https://picsum.photos/id/20/45/45" alt="社会话题图标">
+                    </div>
+                    <div class="card-text">
+                        <h3>社会话题围观</h3>
+                        <p>关注文化、社会类的多元讨论，喜欢看不同视角的观点碰撞~</p>
+                    </div>
+                </div>
+                <!-- 编程实践类 -->
+                <div class="interest-card">
+                    <div class="card-icon">
+                        <img src="https://picsum.photos/id/0/45/45" alt="编程图标">
+                    </div>
+                    <div class="card-text">
+                        <h3>编程小项目</h3>
+                        <p>用前端、Python做实用小工具（比如收集地铁客流量数据）~</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 知乎跳转区 -->
+    <div class="container zhihu-section">
+        <h2 style="color: #2c3e50; margin-bottom: 15px;">来知乎找我玩~</h2>
+        <a href="https://www.zhihu.com/people/da-hao-48-93" class="zhihu-btn" target="_blank">
+            访问我的知乎主页
+        </a>
+        <p class="zhihu-desc">这里有我点赞/关注的内容、日常思考的碎片~</p>
+    </div>
+</body>
+</html>
